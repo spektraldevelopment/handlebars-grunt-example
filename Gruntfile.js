@@ -23,14 +23,23 @@ module.exports = function(grunt) {
             }
         },
         'compile-handlebars': {
-            allStatic: {
+            home: {
             files: [{
               src: 'app/templates/template.handlebars',
               dest: 'build/index.html'
             }],
             preHTML: 'app/pre-dev.html',
             postHTML: 'app/post-dev.html',
-            templateData: 'app/data/results-by-race.json'
+            templateData: 'app/data/test.json'
+          },
+          gallery: {
+            files: [{
+              src: 'app/templates/gallery.handlebars',
+              dest: 'build/gallery.html'
+            }],
+            preHTML: 'app/pre-dev.html',
+            postHTML: 'app/post-dev.html',
+            templateData: 'app/data/galleries.json'
           }
         }
     });
