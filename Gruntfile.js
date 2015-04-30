@@ -136,6 +136,17 @@ module.exports = function(grunt) {
                     beautify: true
                 }
             }
+        },
+        'compile-handlebars': {
+            allStatic: {
+            files: [{
+              src: 'app/templates/template.handlebars',
+              dest: 'build/allStatic.html'
+            }],
+            preHTML: 'app/pre-dev.html',
+            postHTML: 'app/post-dev.html',
+            templateData: 'app/data/results-by-race.json'
+          }
         }
     });
 
@@ -165,6 +176,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-open');
     //HTML build
     grunt.loadNpmTasks('grunt-html-build');
+
+    grunt.loadNpmTasks('grunt-compile-handlebars');
 
     //REGISTER TASKS
 
@@ -217,6 +230,6 @@ module.exports = function(grunt) {
     grunt.registerTask(
         "default",
         "Watches the project for changes, automatically builds them and runs a server.",
-        ["build", "open", "watch"]
+        ["compile-handlebars"]
     );
 };

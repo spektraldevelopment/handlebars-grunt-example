@@ -1,0 +1,26 @@
+{
+    "gallery1": [
+        {
+            "image-path": "image1.jpg",
+            "thumb-path": "thumb1.jpg",
+            "caption": "Here's caption one!"
+        },
+        {
+            "image-path": "image2.jpg",
+            "thumb-path": "thumb2.jpg",
+            "caption": "This is caption 2! ®"
+        }
+    ],
+    "gallery2": [
+        {
+            "image-path": "image3.jpg",
+            "thumb-path": "thumb3.jpg",
+            "caption": "Here's caption three!"
+        },
+        {
+            "image-path": "image4.jpg",
+            "thumb-path": "thumb4.jpg",
+            "caption": "This is caption 4! ®"
+        }
+    ]
+}
